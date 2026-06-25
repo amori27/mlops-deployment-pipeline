@@ -21,7 +21,7 @@ Production-ready MLOps pipeline that handles the complete ML lifecycle from data
 ## Installation
 
 ```bash
-git clone https://github.com/AmirAsaad/mlops-deployment-pipeline.git
+git clone https://github.com/amori27/mlops-deployment-pipeline.git
 cd mlops-deployment-pipeline
 pip install -r requirements.txt
 docker build -t ml-pipeline:latest .
