@@ -1,4 +1,6 @@
 # MLOps Deployment Pipeline
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 A complete MLOps pipeline for automated model training, versioning, deployment, and monitoring using Docker, CI/CD, and model registry.
 
