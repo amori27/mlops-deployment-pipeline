@@ -1,74 +1,28 @@
 # MLOps Deployment Pipeline
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-
-A complete MLOps pipeline for automated model training, versioning, deployment, and monitoring using Docker, CI/CD, and model registry.
-
-## Description
-
-Production-ready MLOps pipeline that handles the complete ML lifecycle from data ingestion to model deployment. Features include Docker containerization, GitHub Actions CI/CD, MLflow model versioning, and Kubernetes deployment configurations.
-
-## Skills & Technologies
-
-- Docker & Kubernetes
-- GitHub Actions CI/CD
-- MLflow for Model Versioning
-- Python 3.9+
-- FastAPI for Model Serving
-- Kubernetes Manifests
-- Helm Charts
-
-## Installation
-
-```bash
-git clone https://github.com/amori27/mlops-deployment-pipeline.git
-cd mlops-deployment-pipeline
-pip install -r requirements.txt
-docker build -t ml-pipeline:latest .
-```
+End-to-end ML lifecycle with Docker, MLflow, and GitHub Actions — trains, versions, serves, and monitors models with Kubernetes deployment configs.
 
 ## Usage
 
-### Training Pipeline
-
 ```bash
+# Train a model
 python src/training/train.py --config configs/train_config.yaml
-```
 
-### Model Serving
-
-```bash
+# Serve with FastAPI
 python src/serving/server.py --model_version latest
-```
 
-### Kubernetes Deployment
-
-```bash
+# Deploy to Kubernetes
 kubectl apply -f kubernetes/deployment.yaml
 ```
 
-## Project Structure
+## Stack
 
-```
-mlops-deployment-pipeline/
-├── src/
-│   ├── training/           # Model training scripts
-│   ├── serving/           # Model serving API
-│   └── monitoring/         # Model monitoring
-├── kubernetes/             # K8s manifests
-├── docker/                 # Dockerfile configs
-├── github/workflows/       # CI/CD pipelines
-├── configs/               # Configuration files
-├── requirements.txt
-└── README.md
-```
-
-## References
-
-- [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
-- [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
-- [GitHub Actions](https://docs.github.com/en/actions)
+- **Training** — scikit-learn / XGBoost with MLflow experiment tracking
+- **CI/CD** — GitHub Actions with model validation before deploy
+- **Serving** — FastAPI with Docker containerization
+- **Orchestration** — Kubernetes manifests + Helm charts
+- **Monitoring** — Prometheus metrics endpoint for model drift detection
 
 ## License
 
-MIT License
+MIT
